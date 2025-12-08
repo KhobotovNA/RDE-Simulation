@@ -1,0 +1,6 @@
+To start new simulation:
+1) Clean previous data (e.g. using foamCleanCase)
+2) Replace 0 directory with 0.orig 
+3) blockMesh + setFields + checkMesh
+4) Start simulation: foamRun > case.log
+Default settings - 1 thread, 200k sells, 100 writing intervals, 2000c ~ computing time
