@@ -1,0 +1,109 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+
+species
+(
+    O2
+    H2O
+    CH4
+    CO2
+    N2
+);
+
+O2
+{
+    specie
+    {
+        molWeight       31.9988;
+    }
+    thermodynamics
+    {
+        Cp              918.0;      // J/(kg K)
+        Hf              0;          // J/kg (reference)
+    }
+    transport
+    {
+        mu              2.07e-5;    // Pa s  (kg/m/s)
+        Pr              0.70;       // -
+    }
+}
+
+H2O
+{
+    specie
+    {
+        molWeight       18.0153;
+    }
+    thermodynamics
+    {
+        Cp              1860.0;     // J/(kg K) (water vapor ~ 1.85 kJ/kgK)
+        Hf              0;          // J/kg
+    }
+    transport
+    {
+        mu              1.00e-5;    // Pa s (order of magnitude at ~300K)
+        Pr              0.90;
+    }
+}
+
+CH4
+{
+    specie
+    {
+        molWeight       16.0428;
+    }
+    thermodynamics
+    {
+        Cp              2220.0;     // J/(kg K) (methane ~ 2.2 kJ/kgK)
+        Hf              0;          // J/kg
+    }
+    transport
+    {
+        mu              1.10e-5;    // Pa s
+        Pr              0.75;
+    }
+}
+
+CO2
+{
+    specie
+    {
+        molWeight       44.01;
+    }
+    thermodynamics
+    {
+        Cp              846.0;      // J/(kg K)
+        Hf              0;          // J/kg
+    }
+    transport
+    {
+        mu              1.48e-5;    // Pa s
+        Pr              0.76;
+    }
+}
+
+N2
+{
+    specie
+    {
+        molWeight       28.0134;
+    }
+    thermodynamics
+    {
+        Cp              1040.0;     // J/(kg K)
+        Hf              0;          // J/kg
+    }
+    transport
+    {
+        mu              1.76e-5;    // Pa s
+        Pr              0.71;
+    }
+}
+
+// ************************************************************************* //
+
